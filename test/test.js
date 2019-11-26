@@ -21,5 +21,20 @@ describe('My comprehension of the JS basics is solid', () => {
         expect({ model: 'Ford' }).to.have.a.property('model');
         expect({ make: 'tesla', model: 'cybertruck'}).to.include({make: 'tesla', model: 'cybertruck'});
     })
-})
+
+    it('includes testing skills', () => {
+        expect(2).not.to.equal('2')
+        expect(Number('2')).not.to.equal('2')
+        expect(2).to.equal(2)
+        expect(Number('two')).to.be.NaN
+        expect(Number('2')).not.to.be.NaN
+        expect(2).not.to.be.NaN
+        expect(Boolean(1)).to.be.true
+        expect(Boolean(0)).to.be.false
+        expect(Boolean('')).to.not.be.true
+        expect(Boolean(undefined)).to.be.false
+        expect({}.foo).to.be.an.undefined
+        expect({foo: 'on you'}.foo).not.to.be.an.undefined
+    })
+})    
         
